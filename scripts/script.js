@@ -1,83 +1,89 @@
-// * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
-const scroll = function () {
-    $("a[href^=\\#]").click(function(e) {   
-    e.preventDefault();   
-    var dest = $(this).attr('href');   
-    console.log(dest);   
-    $('html,body').animate(
-        { scrollTop: $(dest).offset().top }
-        , 'slow'
-    ); 
-});
-};
 
-// * * * * works with id="smooth"
+function svgGallery() {
+    var HeroGrid = document.querySelector(".anim-hero");
 
-// * * * * RESPONSIVE MENU
-// const navMenu = function () {
-//     // * * * * MENU CLICK OUTSIDE
-//     $(document).on("click", function(event){
-//     if(!$(event.target).closest(".responsive-nav-button").length){
-//         $(".responsive-nav").slideUp("fast");
-//         }
-//     });
+    var animationIsOk = window.matchMedia("(prefers-reduced-motion: no-preference)")
+        .matches;
 
-//     $( ".responsive-nav-button" ).click(function() {
-//         $( ".responsive-nav" ).toggle("slow");
-//     });
-// };
+    if (animationIsOk) {
+        var tl = gsap.timeline({
+            delay: 1.7,
+            defaults: {
+                transformOrigin: "right center",
+                ease: "expo.out",
+                duration: 1.2,
+                stagger: {
+                    each: 0.5,
+                    from: "end"
+                }
+            }
+        });
+        
+        tl.set(".fouc--hero", {
+                opacity: 1
+            })
+            .from(".hero__swipe-1", {
+                scaleX: 0
+            })
+            .from(
+                ".hero__swipe-2",
+                {
+                    scaleX: 0
+                },
+                "<"
+            )
+            .from(
+                ".hero__swipe-3",
+                {
+                    scaleX: 0
+                },
+                "<"
+            )
+            .from(
+                ".hero__swipe-4",
+                {
+                    scaleX: 0
+                },
+                "<"
+            )
+            .from(
+                ".hero__circle",
+                {
+                    duration: 0.7,
+                    transformOrigin: "center",
+                    opacity: 0,
+                    scale: 0.7,
+                    ease: "sine.out"
+                },
+                "<"
+            );
+    }
 
-// * * * * LANDING PAGE BLOG POSTS
-// const blogPostArray = [
-//     {
-//         title: "I'm title 1",
-//         image: "./assets/pattern/PatternBone-Full.jpg",
-//         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-//         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-//         link: "blog-article.html"
-//     },
-//      {
-//         title: "I'm title 2",
-//         image: "./assets/pattern/PatternBone-Full.jpg",
-//         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-//         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-//         link: "blog-article.html"
-//     }
-
-// ]
-
-// * * * * TRUNCATE
-// const truncate = function(text,limit, after) {
-//     let content = text.split(" ").slice(0, limit);
-//     content = content.join(" ") + (after ? after : "");
-//     return content;
-// }
-
-// * * * * PUT POSTS ON PAGE
-// const displayBlogPost = () => {
-
-//     const blogPost = blogPostArray.map((post) => {
-//         const content = truncate(post.postContent, 20, "...")
-//         return `<div class="blog-post-single">
-//                 <img src="${post.image}" alt="${post.imageAlt}">
-//                 <h3>${post.title}</h3>
-//                 <p>${content}</p>
-//                 <div class="button-box">
-//                     <a href="${post.link}" class="frizz-button">Read More</a>
-//                 </div>
-//                 </div>
-//         `
-//     })
-//     $(".blog-post-container").append(blogPost)
-// }
-
+}
 // * * * * INIT PIECES
 init = function () {
-    // scroll();
-    // navMenu();
+    svgGallery();
 };
 
 // * * * * DOCUMENT READY
 $(() => {
     init();
 }); // * * * * END OF DOCUMENT READY
+
+
+// * * * * FROM WORK COMPUTER STUFF
+// * * * * Motion Path Plugin (new in GSAP 3)
+// gsap.registerPlugin(MotionPathPlugin);
+
+// gsap.to("#rect", {duration: 5});
+// gsap.to("#divMotion", {
+//     motionPath: {
+//         path: "#path",
+//         align: "#path",
+//         alignOrigin: [0.5, 0.5],
+//         autoRotate: true
+//     },
+//     transformOrigin: "50% 50%",
+//     duration: 5,
+//     ease: "power1.inOut"
+// });

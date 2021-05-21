@@ -266,8 +266,17 @@ a {
 
 a:hover,
 a:active {
-  color: $secondary;
-  text-shadow: 2px 2px 5px $primary, 1px 1px 5px $secondary;
+  color: $third;
+  text-shadow: 1px 1px 1px $black, 1px 1px 5px $secondary;
+}
+
+p.link {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+p.link a {
+  padding: 15px;
 }
 
 // * * * * INPUTS
@@ -341,6 +350,7 @@ section h1 span {
 .right {
   width: 50%;
   text-align: left;
+  padding: 1em;
 }
 
 .image-container {
