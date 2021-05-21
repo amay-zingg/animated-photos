@@ -426,7 +426,7 @@ section h1 span {
 
 .left,
 .right {
-  width: 50%;
+  width: 100%;
   text-align: left;
   padding: 1em;
 }
@@ -481,9 +481,5 @@ section h1 span {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-  }
-  .left,
-  .right {
-    width: 100%;
   }
 }
