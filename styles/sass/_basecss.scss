@@ -348,9 +348,33 @@ section h1 span {
 
 .left,
 .right {
-  width: 100%;
   text-align: left;
   padding: 1em;
+}
+
+.left {
+  width: 70%;
+}
+
+.left svg {
+  width: 100%;
+  @include flexbox(
+    $placeItems: center,
+    $placeContent: center,
+    $direction: row,
+    $wrap: wrap
+  );
+}
+
+.left svg.tiger {
+  background-color: maroon;
+  height: 500px;
+  width: 600px;
+  overflow: hidden;
+}
+
+.right {
+  width: 30%;
 }
 
 .image-container {
@@ -368,6 +392,22 @@ section h1 span {
 }
 
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 600px) {
+  .section-content {
+    @include flexbox(
+      $placeItems: center,
+      $placeContent: center,
+      $direction: column,
+      $wrap: wrap
+    );
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .wrapper {
     max-width: 1024px;
@@ -380,7 +420,7 @@ section h1 span {
     @include flexbox(
       $placeItems: center,
       $placeContent: center,
-      $direction: column,
+      $direction: row,
       $wrap: wrap
     );
   }

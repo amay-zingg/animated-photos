@@ -426,9 +426,43 @@ section h1 span {
 
 .left,
 .right {
-  width: 100%;
   text-align: left;
   padding: 1em;
+}
+
+.left {
+  width: 70%;
+}
+
+.left svg {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.left svg.tiger {
+  background-color: maroon;
+  height: 500px;
+  width: 600px;
+  overflow: hidden;
+}
+
+.right {
+  width: 30%;
 }
 
 .image-container {
@@ -456,6 +490,31 @@ section h1 span {
 }
 
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 600px) {
+  .section-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    place-content: center;
+    place-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .wrapper {
     max-width: 1024px;
@@ -468,10 +527,10 @@ section h1 span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     place-content: center;
     place-items: center;
     -ms-flex-wrap: wrap;
