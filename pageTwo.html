@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Photo Display</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <main>
+            <!-- <div class="section-content">
+                <div class="left">
+                    <!-- SVG HERE -->
+            <!-- </div>
+                <div class="right">
+                    <h1>Title</h1>
+                    <p class="link">Link: <a href="">Youtube Link</a>
+                        <a href=""></a>
+                    </p>
+                </div>
+            </div> -->
+            
+            <div class="section-content">
+                <div class="left">
+                    <!-- SVG HERE -->
+                    <svg id="svg1" class="tiger" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 250">
+                        <defs>
+                            <clipPath id="clip-path-lockup1" transform="translate(-0.15 -0.13)">
+                                <polygon id="clipPolygon1" points="105,-35 390,80 -150,370" id="element"
+                                    d="M20,15v61.44H233.89V75Zm200.52,48.07H33.37V88.38H220.52Z" fill="maroon">
+                                </polygon>
+                            </clipPath>
+                        </defs>
+                        <g id="clip1">
+                            <g style="clip-path: url(#clip-path-lockup1)">
+
+                                <image id="bg-lockup1" width="600" height="500" transform="scale(0.5) "
+                                    xlink:href="./assets/Tiger4.jpg" />
+
+                            </g>
+                        </g>
+                    </svg>
+
+                    <!-- Try to reconstruct a clip path -->
+                    <!-- <svg>
+                <defs>
+                    <clipPath id="heroclip1">
+                        <rect class="hero__swipe-1" id="heroclip1Rect" x="101.31" y="51.24" width="500" height="600"fill="#fff"
+                            data-svg-origin="590.1000061035156 162.17499923706055" transform="matrix(1,0,0,1,0,0)"
+                            style="transform-origin: 0px 0px;"></rect>
+                    </clipPath>
+                </defs>
+                <rect class="hero__swipe-1" x="102" y="52" width="500" height="600" fill="maroon" data-svg-origin="590 162"
+                    transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></rect>
+
+                <image clip-path="url(#heroclip1)" href="assets/Tiger4.jpg" preserveAspectRatio="xMidYMid slice" x="101" y="51"
+                    width="500" height="600"></image>
+ -->
+                    </svg>
+
+                </div>
+                <div class="right">
+                    <h1>Moving Polygon</h1>
+                    <!-- <p class="link">Link: <a href="">Youtube Link</a>
+                        <a href=""></a>
+                    </p> -->
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="left">
+                    <svg class="Hero__image-grid anim-hero" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 590.91 632.66">
+                        <defs>
+                            <clipPath id="heroclip1">
+                                <rect class="hero__swipe-1" id="heroclip1Rect" x="101.31" y="51.24" width="488.79"
+                                    height="221.87" fill="#fff" data-svg-origin="590.1000061035156 162.17499923706055"
+                                    transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></rect>
+                            </clipPath>
+
+                            <clipPath id="heroclip2">
+                                <rect class="hero__swipe-2" id="heroclip1Rect" x="195.36" y="293.94" width="292.4"
+                                    height="268.6" fill="#fff" data-svg-origin="487.75999450683594 428.24000549316406"
+                                    transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></rect>
+                            </clipPath>
+
+                            <clipPath id="heroclip3">
+                                <rect class="hero__swipe-3" id="heroclip3Rect" x="1.73" y="233.41" width="174.53"
+                                    height="162.61" fill="#fff" data-svg-origin="176.25999879837036 314.71500396728516"
+                                    transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></rect>
+                            </clipPath>
+
+                            <clipPath id="heroclip4">
+                                <rect class="hero__swipe-4" id="heroclip4Rect" x="100.03" y="405.79" width="75.83"
+                                    height="73.12" fill="#fff" data-svg-origin="175.86000061035156 442.3500099182129"
+                                    transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></rect>
+                            </clipPath>
+
+                        </defs>
+                        <g class="fouc fouc--hero" opacity="0" data-svg-origin="591 314.5249938964844"
+                            transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px; opacity: 1;">
+                            <circle class="hero__circle" cx="90.18" cy="79.56" r="75" fill="firebrick"
+                                data-svg-origin="90.18000030517578 79.55999755859375" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px; opacity: 1;"></circle>
+
+                            <!-- R changes size of circle -->
+
+                            <circle class="hero__circle" cx="488.39" cy="563.49" r="30" fill="maroon"
+                                data-svg-origin="488.3900146484375 563.489990234375" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px; opacity: 1;"></circle>
+
+                            <rect class="hero__swipe-1" x="102" y="52" width="488" height="220" fill="maroon"
+                                data-svg-origin="590 162" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px;"></rect>
+                            <rect class="hero__swipe-2" x="196" y="294" width="292" height="268" fill="maroon"
+                                data-svg-origin="488 428" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px;"></rect>
+                            <rect class="hero__swipe-3" x="2" y="234" width="173" height="162" fill="maroon"
+                                data-svg-origin="175 315" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px;"></rect>
+                            <rect class="hero__swipe-4" x="101" y="406" width="75" height="73" fill="maroon"
+                                data-svg-origin="176 442.5" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px;"></rect>
+
+                            <image clip-path="url(#heroclip1)" href="assets/Tiger6.jpg"
+                                preserveAspectRatio="xMidYMid slice" x="101" y="51" width="490" height="223"></image>
+                            <image clip-path="url(#heroclip2)" href="assets/Tiger5.jpg"
+                                preserveAspectRatio="xMidYMid slice" x="195" y="293" width="294" height="270"></image>
+                            <image clip-path="url(#heroclip3)" href="assets/Tiger3.jpg"
+                                preserveAspectRatio="xMidYMid slice" x="1" y="233" width="176" height="164"></image>
+                            <image clip-path="url(#heroclip4)" href="assets/Tiger8.jpg"
+                                preserveAspectRatio="xMidYMid slice" x="99" y="404" width="78" height="76"></image>
+                        </g>
+                    </svg>
+                </div>
+                <div class="right">=
+                    <h1>SVG Animated Photos</h1>
+                    <p class="link">Links: <a href="https://www.cassie.codes/posts/swipey-image-grids/">Swipey Image
+                            Grids</a><a href="https://codepen.io/cassie-codes/pen/mdRbGzO">CodePen</a></p>
+                    <p>Things to note:</p>
+                    <ul>
+                        <li>☞ The item at the top of the grid has to be last in the DOM stack, z-index doesn't work
+                            here.</li>
+                        <li>☞ If we were in HTML-land we'd be reaching for background-size:cover now, but although SVG
+                            has a lot of shared properies with CSS, this isn't one of them. Instead we have
+                            preserveAspectRatio</li>
+                        <li>☞ xMidYMid will position the image in the center of the x and y axis, and slice says 'scale
+                            this up until it fills the container, slicing off any excess'</li>
+                        <li>☞ To 'swipe' our images in we're going to use a clipPath - another awesome thing which SVG
+                            has at our disposal. Think of clipping as a bit like cutting out, the clip path uses the
+                            geometry of any child element to clip the element (or elements) it's applied to. Everything
+                            outside of the clip path will be clipped and therefore invisible.</li>
+                        <li>☞ Circle only works perfect if the item is a square to begin with, otherwise it leaves
+                            cuttings on the sides</li>
+                        <!-- <li>☞ </li> -->
+
+                        <img src="assets/svg1.png" alt="code example">
+                        <img src="assets/svg2.png" alt="code example">
+                        <img src="assets/svg3.png" alt="code example">
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+    </main>
+    </div>
+
+    <footer>
+        <p><a href="https://www.anastasiamay.com">Anastasia May</a> 2021</p>
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
