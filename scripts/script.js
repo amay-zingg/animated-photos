@@ -1,36 +1,3 @@
-function sectionOne() {
-  let el = document.getElementById("turbulence");
-
-  gsap.set(".tiger-gallery", { opacity: 1 });
-
-  gsap.from(".tiger", 1, { opacity: 0, ease: "power1.inOut", x: -200 });
-
-  gsap.to(".tiger", {
-    duration: 1,
-    opacity: 1,
-    x: 0,
-    stagger: 0.2,
-  });
-
-  gsap.to(el, 3, { attr: { baseFrequency: "0 0" } });
-}
-
-sectionOne();
-
-function sectionTwo() {
-  let ele = document.getElementById("turbulenceTwo");
-
-  gsap.from(".tiger-queen-word", 1, {
-    opacity: 0,
-    ease: "back.out(2)",
-  });
-
-  gsap.to(".tiger-queen-word", { opacity: 1, y: 40, duration: 2, scale: 1.1 });
-
-  gsap.to(ele, 3, { attr: { baseFrequency: "0 0" } });
-}
-
-sectionTwo();
 
 function frameOne() {
   // var delay = 4.5;

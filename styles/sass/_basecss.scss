@@ -346,7 +346,6 @@ section h1 span {
 
 .left,
 .right {
-  width: 50%;
   text-align: left;
   padding: 1em;
   position: relative;
@@ -373,14 +372,7 @@ section h1 span {
 }
 
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
-@media only screen and (min-width: 900px) {
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) {
   .section-content {
     @include flexbox(
       $placeItems: center,
@@ -394,4 +386,27 @@ section h1 span {
   .right {
     width: 100%;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section-content {
+    @include flexbox(
+      $placeItems: center,
+      $placeContent: center,
+      $direction: row,
+      $wrap: wrap
+    );
+  }
+
+  // .left,
+  // .right {
+  //   width: 100%;
+  // }
 }
