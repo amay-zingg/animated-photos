@@ -1,83 +1,86 @@
-// * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
-const scroll = function () {
-    $("a[href^=\\#]").click(function(e) {   
-    e.preventDefault();   
-    var dest = $(this).attr('href');   
-    console.log(dest);   
-    $('html,body').animate(
-        { scrollTop: $(dest).offset().top }
-        , 'slow'
-    ); 
-});
-};
+function sectionOne() {
+  let el = document.getElementById("turbulence");
 
-// * * * * works with id="smooth"
+  gsap.set(".tiger-gallery", { opacity: 1 });
 
-// * * * * RESPONSIVE MENU
-// const navMenu = function () {
-//     // * * * * MENU CLICK OUTSIDE
-//     $(document).on("click", function(event){
-//     if(!$(event.target).closest(".responsive-nav-button").length){
-//         $(".responsive-nav").slideUp("fast");
-//         }
-//     });
+  gsap.from(".tiger", 1, { opacity: 0, ease: "power1.inOut", x: -200 });
 
-//     $( ".responsive-nav-button" ).click(function() {
-//         $( ".responsive-nav" ).toggle("slow");
-//     });
-// };
+  gsap.to(".tiger", {
+    duration: 1,
+    opacity: 1,
+    x: 0,
+    stagger: 0.2,
+  });
 
-// * * * * LANDING PAGE BLOG POSTS
-// const blogPostArray = [
-//     {
-//         title: "I'm title 1",
-//         image: "./assets/pattern/PatternBone-Full.jpg",
-//         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-//         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-//         link: "blog-article.html"
-//     },
-//      {
-//         title: "I'm title 2",
-//         image: "./assets/pattern/PatternBone-Full.jpg",
-//         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-//         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-//         link: "blog-article.html"
-//     }
+  gsap.to(el, 3, { attr: { baseFrequency: "0 0" } });
+}
 
-// ]
+sectionOne();
 
-// * * * * TRUNCATE
-// const truncate = function(text,limit, after) {
-//     let content = text.split(" ").slice(0, limit);
-//     content = content.join(" ") + (after ? after : "");
-//     return content;
-// }
+function sectionTwo() {
+  let ele = document.getElementById("turbulenceTwo");
 
-// * * * * PUT POSTS ON PAGE
-// const displayBlogPost = () => {
+  gsap.from(".tiger-queen-word", 1, {
+    opacity: 0,
+    ease: "back.out(2)",
+  });
 
-//     const blogPost = blogPostArray.map((post) => {
-//         const content = truncate(post.postContent, 20, "...")
-//         return `<div class="blog-post-single">
-//                 <img src="${post.image}" alt="${post.imageAlt}">
-//                 <h3>${post.title}</h3>
-//                 <p>${content}</p>
-//                 <div class="button-box">
-//                     <a href="${post.link}" class="frizz-button">Read More</a>
-//                 </div>
-//                 </div>
-//         `
-//     })
-//     $(".blog-post-container").append(blogPost)
-// }
+  gsap.to(".tiger-queen-word", { opacity: 1, y: 40, duration: 2, scale: 1.1 });
 
-// * * * * INIT PIECES
-init = function () {
-    // scroll();
-    // navMenu();
-};
+  gsap.to(ele, 3, { attr: { baseFrequency: "0 0" } });
+}
 
-// * * * * DOCUMENT READY
-$(() => {
-    init();
-}); // * * * * END OF DOCUMENT READY
+sectionTwo();
+
+function frameOne() {
+  // var delay = 4.5;
+
+  gsap.set(["#bg-lockup1", "#svg1", "clip1"], { autoAlpha: 1 });
+  gsap.set(["#svg1"], { opacity: 0.98 });
+
+  var tl = gsap.timeline({});
+
+  tl.from(["#clipPolygon1", "#clipPolygon2"], {
+    attr: { points: "0,-305 590,20 -450,970" },
+    delay: 1.75,
+  });
+
+  tl.to(
+    ["#clipPolygon1", "#clipPolygon2"],
+    {
+      attr: { points: " 390,80 -20,370 35,-35" },
+      duration: 0.9,
+      ease: Power1.easeInOut,
+      delay: 2,
+    },
+    "r1"
+  );
+  tl.to(
+    ["#clipPolygon1", "#clipPolygon2"],
+    {
+      scale: 1.2,
+      transformOrigin: "50% 50%",
+      duration: 0.4,
+      yoyo: true,
+      repeat: 1,
+      ease: Power1.easeInOut,
+      delay: 2,
+    },
+    "r1"
+  );
+
+  tl.to(["#clipPolygon1", "#clipPolygon2"], {
+    attr: { points: "430,120 -20,270 55,-64 " },
+    duration: 5.6,
+    ease: Linear.easeNone,
+  });
+
+  tl.to(["#clipPolygon1", "#clipPolygon2"], {
+    attr: { points: " -20,370 45,-65  420,80" },
+    duration: 1.3,
+    ease: Back.easeInOut.config(0),
+  });
+
+  // gsap.delayedCall(delay, frameTwo);
+}
+frameOne();

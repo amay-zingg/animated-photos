@@ -1,0 +1,19 @@
+/* * * * NOISE * * * */
+.tiger {
+  filter: url(#noise);
+}
+
+/* * * * WATER * * * */
+.tiger-queen-word {
+  filter: url(#water);
+}
+
+/* * * * OFFSET * * * */
+.tiger-queen-word2 {
+  filter: url(#offset);
+}
+
+/* * * * DROP SHADOW * * * */
+.tiger-queen-word3 {
+  filter: url(#drop-shadow);
+}
