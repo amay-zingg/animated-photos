@@ -113,11 +113,17 @@
   background: maroon;
 }
 
+#legalTiger {
+  background: no-repeat url(../../assets/Tiger4.jpg);
+  background-size: contain;
+}
+
 /* * * * NOISE * * * */
-.polygon {
+.tigerBox {
   margin: 1em;
   width: 250px;
   height: 300px;
+  position: relative;
 }
 
 .tiger {

@@ -428,6 +428,7 @@ section h1 span {
 .right {
   text-align: left;
   padding: 1em;
+  position: relative;
 }
 
 .left svg.tiger {
@@ -436,11 +437,11 @@ section h1 span {
 }
 
 .left {
-  width: 68%;
+  width: 50%;
 }
 
 .right {
-  width: 28%;
+  width: 50%;
 }
 
 .image-container {
@@ -652,11 +653,17 @@ ul li {
   background: maroon;
 }
 
+#legalTiger {
+  background: no-repeat url(../../assets/Tiger4.jpg);
+  background-size: contain;
+}
+
 /* * * * NOISE * * * */
-.polygon {
+.tigerBox {
   margin: 1em;
   width: 250px;
   height: 300px;
+  position: relative;
 }
 
 .tiger {
