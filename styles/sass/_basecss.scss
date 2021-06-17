@@ -333,11 +333,11 @@ section h1 span {
 
 .section-content {
   width: 100%;
-  border: 2px solid $primary;
-  border-radius: 10px;
-  margin: 1em;
+  border: 1px solid $primary;
+  border-radius: 15px;
+  margin: 1em 0;
   @include flexbox(
-    $placeItems: flex-start,
+    $placeItems: center,
     $placeContent: space-around,
     $direction: row,
     $wrap: wrap
