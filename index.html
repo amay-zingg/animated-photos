@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Photo Display</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Playground</title>
 
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,10 +14,86 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Kreon&display=swap" rel="stylesheet" />
 
-</head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <div class="section-content">
+          <div class="left">
+            <svg
+              id="svg1"
+              class="F3 posAb topLef"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 299.7 249.75"
+            >
+              <defs>
+                <clipPath
+                  id="clip-path-lockup1"
+                  transform="translate(-0.15 -0.13)"
+                >
+                  <polygon
+                    id="clipPolygon1"
+                    points="105,-35 390,80 -150,370"
+                    id="element"
+                    d="M20,15v61.44H233.89V75Zm200.52,48.07H33.37V88.38H220.52Z"
+                    style="fill: none"
+                  ></polygon>
+                </clipPath>
+              </defs>
+              <g id="clip1">
+                <g style="clip-path: url(#clip-path-lockup1)">
+                  <image
+                    id="bg-lockup1"
+                    width="600"
+                    height="500"
+                    transform="scale(0.5) "
+                    xlink:href="../assets/Tiger4.jpg"
+                  />
+                </g>
+              </g>
+            </svg>
 
-<body>
+            <!-- <svg
+              id="svg2"
+              class="F3 posAb topLef"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 299.7 249.75"
+            >
+              <defs>
+                <clipPath
+                  id="clip-path-lockup2"
+                  transform="translate(-0.15 -0.13)"
+                >
+                  <polygon
+                    id="clipPolygon2"
+                    points="105,-35 390,80 -150,370"
+                    id="element"
+                    d="M20,15v61.44H233.89V75Zm200.52,48.07H33.37V88.38H220.52Z"
+                    style="fill: none"
+                  ></polygon>
+                </clipPath>
+              </defs>
+              <g id="clip2">
+                <g style="clip-path: url(#clip-path-lockup2)">
+                  <image
+                    id="bg-lockup2"
+                    width="600"
+                    height="500"
+                    transform="scale(0.5) "
+                    xlink:href="../assets/white.jpg"
+                  />
+                </g>
+              </g>
+            </svg> -->
+          </div>
+          <div class="right">
+            <h1>Moving Polygon</h1>
+          </div>
+        </div>
 
+<<<<<<< HEAD
     <div class="wrapper">
         <main>
             <!-- <div class="section-content">
@@ -188,22 +263,422 @@
                 </p>
             </div> -->
     </div>
+=======
+        <div class="section-content">
+          <div class="left">
+            <svg
+              class="tiger-gallery"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 600 200"
+            >
+              <!-- THE FILTER IS IN THE SVG -->
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency="0.01 0.01"
+                  result="NOISE"
+                  numOctaves="2"
+                  id="turbulence"
+                />
+                <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="10" />
+              </filter>
 
-    </main>
+              <!-- THE SHAPES ARE IN THE SVG -->
+              <defs>
+                <clipPath id="tigerClip1">
+                  <rect
+                    class="tiger-frame"
+                    id="tiger-frame"
+                    fill="maroon"
+                    x="0"
+                    y="0"
+                    height="200"
+                    width="200"
+                    data-svg-origin="590.1000061035156 162.17499923706055"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 0px 0px"
+                  ></rect>
+                </clipPath>
+
+                <clipPath id="tigerClip2">
+                  <rect
+                    class="tiger-frame"
+                    id="tiger-frame"
+                    fill="maroon"
+                    x="200"
+                    y="0"
+                    height="200"
+                    width="200"
+                    data-svg-origin="590.1000061035156 162.17499923706055"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 0px 0px"
+                  ></rect>
+                </clipPath>
+
+                <clipPath id="tigerClip3">
+                  <rect
+                    class="tiger-frame"
+                    id="tiger-frame"
+                    fill="maroon"
+                    x="400"
+                    y="0"
+                    height="200"
+                    width="200"
+                    data-svg-origin="590.1000061035156 162.17499923706055"
+                    transform="matrix(1,0,0,1,0,0)"
+                    style="transform-origin: 0px 0px"
+                  ></rect>
+                </clipPath>
+              </defs>
+
+              <!-- THE PICTURES ARE IN THE SVG -->
+              <g
+                transform="matrix(1,0,0,1,0,0)"
+                style="transform-origin: 0px 0px; opacity: 1"
+              >
+                <image
+                  clip-path="url(#tigerClip1)"
+                  href="assets/Tiger3.jpg"
+                  preserveAspectRatio="xMidYMid slice"
+                  x="0"
+                  y="0"
+                  height="200"
+                  width="200"
+                  class="tiger"
+                ></image>
+                <image
+                  clip-path="url(#tigerClip2)"
+                  href="assets/Tiger8.jpg"
+                  preserveAspectRatio="xMidYMid slice"
+                  x="200"
+                  y="0"
+                  height="200"
+                  width="200"
+                  class="tiger"
+                ></image>
+                <image
+                  clip-path="url(#tigerClip3)"
+                  href="assets/Tiger4.jpg"
+                  preserveAspectRatio="xMidYMid slice"
+                  x="400"
+                  y="0"
+                  height="200"
+                  width="200"
+                  class="tiger"
+                ></image>
+              </g>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Noise Filter & ClipPath & Stagger</h1>
+            <p></p>
+            <p class="link">
+              <a href="https://greensock.com/docs/v3/Staggers"
+                >Staggers Greensock</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="section-content">
+          <div class="left">
+            <svg
+              id="tiger-queen"
+              class="tiger-queen"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 150"
+            >
+              <filter id="water">
+                <feTurbulence
+                  baseFrequency="0.02 0.02"
+                  result="TURBULENCE"
+                  numOctaves="3"
+                  id="turbulenceTwo"
+                />
+                <feDisplacementMap
+                  in="SourceGraphic"
+                  in2="TURBULENCE"
+                  scale="5"
+                />
+              </filter>
+>>>>>>> 8486c364e435b0900d6db64c5a4b297a33f760bc
+
+              <image
+                class="tiger-queen-word"
+                href="assets/tigerStripesWord.svg"
+                x="-5"
+                y="0"
+                height="70"
+                width="100%"
+              ></image>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Turbulence Filter - Water</h1>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="section-content">
+          <div class="left">
+            <svg
+              id="tiger-queen"
+              class="tiger-queen"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+            >
+              <filter id="offset">
+                <feConvolveMatrix
+                  order="4,4"
+                  kernelMatrix="
+                  1 0 0 0
+                  0 1 0 0
+                  0 0 1 0 
+                  0 0 0 1"
+                  in="SourceAlpha"
+                  result="BEVEL"
+                />
+                <feOffset dx="2" dy="2" in="BEVEL" result="OFFSET" />
+                <feMerge>
+                  <feMergeNode in="OFFSET" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <image
+                class="tiger-queen-word2"
+                href="assets/tigerStripesWord.svg"
+                x="-5"
+                y="0"
+                height="100"
+                width="100%"
+              ></image>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Offset Filter to look like drop shadow</h1>
+            <p class="link">
+              <a
+                href="https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/"
+                >SVG Filters</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="section-content">
+          <div class="left">
+            <svg
+              id="tiger-queen"
+              class="tiger-queen"
+              xmlns="http://www.w3.org/2000/svg"
+              width="300px"
+              height="100px"
+            >
+              <filter id="drop-shadow">
+                <feFlood flood-color="maroon" result="FLOOD"></feFlood>
+                />
+                <feOffset in="SourceAlpha" dx="23" dy="23"></feOffset>
+                <feGuassianBlur
+                  stdDeviation="10"
+                  result="DROP"
+                ></feGuassianBlur>
+                <feComposite
+                  in="COLOR"
+                  in2="DROP"
+                  operator="in"
+                  result="SHADOW"
+                ></feComposite>
+                <feMerge>
+                  <feMergeNode in="FLOOD" />
+                  <feMergeNode in="SHADOW" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <image
+                class="tiger-queen-word3"
+                href="assets/tigerStripesWord.svg"
+                x="0"
+                y="0"
+                height="100px"
+                width="250px"
+              ></image>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Drop Shadow</h1>
+          </div>
+        </div>
+
+        <div class="section-content">
+          <div class="left">
+            <svg
+              id="tiger-queen"
+              class="tiger-queen"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-10 -10 300 150"
+            >
+              <filter id="morph" filterUnits="userSpaceOnUse">
+                <feMorphology
+                  operator="dilate"
+                  radius="4"
+                  in="SourceGraphic"
+                  result="THICKNESS"
+                />
+                <feComposite
+                  operator="out"
+                  in="THICKNESS"
+                  in2="SourceGraphic"
+                />
+              </filter>
+
+              <image
+                class="tiger-queen-word4"
+                href="assets/tigerStripesWord.svg"
+                x="0"
+                y="0"
+                height="120px"
+                width="280px"
+                filter="url(#morph)"
+              ></image>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Morphology</h1>
+          </div>
+        </div>
+
+        <div class="section-content">
+          <div class="left">
+            <svg
+              viewBox="0 0 250 150"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+            >
+              <defs>
+                <filter
+                  id="MyFilter"
+                  filterUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="300"
+                  height="200"
+                >
+                  <feGaussianBlur
+                    in="SourceAlpha"
+                    stdDeviation="4"
+                    result="blur"
+                  />
+                  <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                  <feSpecularLighting
+                    in="blur"
+                    surfaceScale="5"
+                    specularConstant=".75"
+                    specularExponent="20"
+                    lighting-color="#bbbbbb"
+                    result="specOut"
+                  >
+                    <fePointLight x="5000" y="-1000" z="2000" />
+                  </feSpecularLighting>
+                  <feComposite
+                    in="specOut"
+                    in2="SourceAlpha"
+                    operator="in"
+                    result="specOut"
+                  />
+                  <feComposite
+                    in="SourceGraphic"
+                    in2="specOut"
+                    operator="arithmetic"
+                    k1="0"
+                    k2="1"
+                    k3="1"
+                    k4="0"
+                    result="litPaint"
+                  />
+                  <feMerge>
+                    <feMergeNode in="offsetBlur" />
+                    <feMergeNode in="litPaint" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <g filter="url(#MyFilter)">
+                <path
+                  fill="none"
+                  stroke="firebrick"
+                  stroke-width="10"
+                  d="M50,90 C0,90 0,30 50,30 L150,30 C200,30 200,90 150,90 z"
+                />
+                <path
+                  fill="maroon"
+                  d="M60,80 C30,80 30,40 60,40 L140,40 C170,40 170,80 140,80 z"
+                />
+                <g
+                  fill="white"
+                  stroke="orangered"
+                  font-size="35"
+                  font-family="Impact"
+                >
+                  <text x="53" y="73">Meow!</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="right">
+            <h1>Filter Effects</h1>
+            <ul>
+              <li>
+                ✶ Filter primitive ‘feGaussianBlur’ takes input SourceAlpha,
+                which is the alpha channel of the source graphic. The result is
+                stored in a temporary buffer named "blur". Note that "blur" is
+                used as input to both filter primitives 2 and 3.
+              </li>
+              <li>
+                ✶ Filter primitive ‘feOffset’ takes buffer "blur", shifts the
+                result in a positive direction in both x and y, and creates a
+                new buffer named "offsetBlur". The effect is that of a drop
+                shadow.
+              </li>
+              <li>
+                ✶ Filter primitive ‘feSpecularLighting’, uses buffer "blur" as a
+                model of a surface elevation and generates a lighting effect
+                from a single point source. The result is stored in buffer
+                "specOut".
+              </li>
+              <li>
+                ✶ Filter primitive ‘feComposite’ masks out the result of filter
+                primitive 3 by the original source graphics alpha channel so
+                that the intermediate result is no bigger than the original
+                source graphic.
+              </li>
+              <li>
+                ✶ Filter primitive ‘feComposite’ composites the result of the
+                specular lighting with the original source graphic.
+              </li>
+              <li>
+                ✶ Filter primitive ‘feMerge’ composites two layers together. The
+                lower layer consists of the drop shadow result from filter
+                primitive 2. The upper layer consists of the specular lighting
+                result from filter primitive 5.
+              </li>
+            </ul>
+            <p class="link">
+              <a href="https://www.w3.org/TR/SVG11/filters.html#FilterElement"
+                >Article</a
+              >
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
 
     <footer>
-        <p><a href="https://www.anastasiamay.com">Anastasia May</a> 2021</p>
+      <p><a href="https://www.anastasiamay.com">Anastasia May</a> 2021</p>
     </footer>
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
     <script src="scripts/script.js"></script>
-</body>
-
+  </body>
 </html>
