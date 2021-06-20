@@ -573,7 +573,7 @@ ul li {
 }
 
 #legalHeading {
-  background: url("./../../assets/legalHeading.png");
+  background: url("../assets/legalHeading.png");
   height: 15px;
 }
 
@@ -588,7 +588,7 @@ ul li {
 }
 
 #popUp {
-  background: url("./../../assets/popUp.png");
+  background: url("../assets/popUp.png");
   width: 11px;
   height: 11px;
   top: 2px;
@@ -596,7 +596,7 @@ ul li {
 }
 
 #popDown {
-  background: url("./../../assets/popUp.png");
+  background: url("../assets/popUp.png");
   width: 11px;
   height: 11px;
   top: 2px;
@@ -642,7 +642,7 @@ ul li {
 }
 
 #legalCopy {
-  background: url("./../../assets/legalCopy.png");
+  background: url("../assets/legalCopy.png");
   height: 209px;
   width: 278px;
 }
@@ -654,7 +654,7 @@ ul li {
 }
 
 #legalTiger {
-  background: no-repeat url(../../assets/Tiger4.jpg);
+  background: no-repeat url(../assets/Tiger4.jpg);
   background-size: contain;
 }
 
