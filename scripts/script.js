@@ -129,11 +129,12 @@ function scrollFrame() {
     gsap.delayedCall(3, legalPopUp);
     gsap.fromTo(
       ["#legalCopyCon"],
-      // { scrollTo: 0 },
+      { scrollTo: 0 },
       { duration: 3.25, ease: Linear.easeNone, delay: 3.6 }
-      // scrollTo: 160
-    );
-  }
+      scrollTo: 160
+      );
+  };
+  
 
   function legal() {
     gsap.set([".lgl"], { autoAlpha: 1 });
@@ -158,7 +159,7 @@ function scrollFrame() {
     gsap.set(["#popUp", "#legalPopUp"], { autoAlpha: 1 });
     gsap.set(["#popDown", "#legalPopDown"], { autoAlpha: 0 });
     gsap.to("#legalCon", { duration: 0.3, y: 42, ease: "power2.inOut" });
-    // gsap.set(["#legalCopyCon"], { scrollTo: 0 });
+    gsap.set(["#legalCopyCon"], { scrollTo: 0 });
     var boxLegal = document.querySelector("#legalCon");
     if (boxLegal.classList.contains(".legalOn")) {
       boxLegal.classList.remove(".legalOn");
@@ -174,7 +175,7 @@ function scrollFrame() {
     gsap.to("#legalCon", { duration: 0.6, y: 0, ease: "power2.inOut" });
     gsap.set(["#popUp", "#legalPopUp"], { autoAlpha: 0 });
     gsap.set(["#popDown", "#legalPopDown"], { autoAlpha: 1 });
-    // gsap.to(['#legalCopyCon'], {duration: 3, scrollTo: 25});
+    gsap.to(['#legalCopyCon'], {duration: 3, scrollTo: 25});
 
     var lglScroll = document.getElementById("legalCopyCon");
     lglScroll.style.cursor = "grab";
@@ -185,7 +186,7 @@ function scrollFrame() {
       lglScroll.style.cursor = "grabbing";
       lglScroll.style.userSelect = "none";
       pos = {
-        // top: lglScroll.scrollTop,
+        top: lglScroll.scrollTop,
         // Get the current mouse position
         y: e.clientY,
       };
