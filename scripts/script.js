@@ -128,11 +128,15 @@ function scrollFrame() {
   if (!boxLegal.classList.contains(".legalOn")) {
     gsap.delayedCall(3, legalPopUp);
     gsap.fromTo(
-      ["#legalCopyCon"],
-      { scrollTo: 0 },
-      { duration: 3.25, ease: Linear.easeNone, delay: 3.6 }
-      scrollTo: 160
-      );
+      ["#legalCopyCon"], 
+    //  https://greensock.com/scrolltoplugin/
+      {duration: 3.25, 
+      ease: Linear.easeNone, 
+      delay: 3.6,
+      scrollTo: 160 
+      }
+      
+    );
   };
   
 
