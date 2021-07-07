@@ -530,6 +530,7 @@ ul li {
 .adSize {
   width: 300px;
   height: 250px;
+  overflow: hidden;
 }
 
 .vidHid {
@@ -692,4 +693,30 @@ ul li {
 .tiger-queen-word3 {
   -webkit-filter: url(#drop-shadow);
           filter: url(#drop-shadow);
+}
+
+/* * * * * * * * * * * * * * Wobbly Circle * * * * * * * * * * * * * * */
+.circlesFrame {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.border {
+  border: 1px solid maroon;
+}
+
+#purple-stroke-circle-box,
+#blue-filled-circle-box,
+#blue-stroke-circle-box,
+#pink-filled-circle-box {
+  opacity: 0;
+}
+
+#middle,
+#start,
+#blue-filled-circle,
+#blue-stroke-circle,
+#pink-filled-circle {
+  overflow: hidden;
 }
