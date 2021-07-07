@@ -13,27 +13,48 @@ function circleAnimation(){
     gsap.set(["#end", "#middle"], { autoAlpha: 0 });
 
     var tl = gsap.timeline({});
+    // * * * * ORIGINAL
+    // tl.from(["#start"], {
+    //   autoAlpha: 0,
+    //   scale: 0.5,
+    // });
+    // tl.to(["#start"], {
+    //   duration: 0.05,
+    //   autoAlpha: 1,
+    //   rotation: 360,
+    // });
+    // tl.to(["#start"], {
+    //   x: 252,
+    //   y: -82,
+    //   transformOrigin: "50% 50%",
+    //   scale: 1.05,
+    //   rotation: 360,
+    //   ease: Linear.easeNone,
+    //   morphSVG: "#middle",
+    // });
+    // tl.to(["#start"], {
+    //   duration: 6.5,
+    //   rotation: "+=360",
+    //   ease: Linear.easeNone,
+    // });
+    // * * * * ORIGINAL
+ 
     tl.from(["#start"], {
       autoAlpha: 0,
-      scale: 0.5,
     });
     tl.to(["#start"], {
-      duration: 0.05,
       autoAlpha: 1,
-      rotation: 360,
-      ease: Linear.easeNone,
-    });
-    tl.to(["#start"], {
+      duration: .5,
       x: 252,
       y: -82,
       transformOrigin: "50% 50%",
       scale: 1.05,
-      rotation: 360,
       ease: Linear.easeNone,
       morphSVG: "#middle",
     });
     tl.to(["#start"], {
-      duration: 6.5,
+      // * * * * GO BACK TO 6.5sec
+      duration: 1,
       rotation: "+=360",
       ease: Linear.easeNone,
     });
@@ -59,6 +80,8 @@ function circleAnimation(){
     gsap.delayedCall(delay, frameTwo);
     };
 
+    frameTwo();
+
     function frameTwo() {
       var delay = 2.6;
 
@@ -72,24 +95,15 @@ function circleAnimation(){
     var tl = gsap.timeline({});
     tl.from(["#start"], {
       delay: 2.6,
-      duration: 0.3,
-    });
-    tl.to(["#start"], {
-      duration: 0.01,
-      autoAlpha: 0.5,
     });
     tl.to(["#start"], {
       duration: 0.1,
       x: 290,
       y: -100,
-      transformOrigin: "50% 50%",
-      ease: Linear.easeNone,
+       autoAlpha: 0,
+      // transformOrigin: "50% 50%",
+      // ease: Linear.easeNone,
       morphSVG: "#start",
-    });
-    tl.to(["#start"], {
-      duration: 0.01,
-      opacity: 0,
-      autoAlpha: 0,
     });
 
     gsap.delayedCall(delay, frameThree);
@@ -121,12 +135,6 @@ function circleAnimation(){
     
 
       function endFrame() {
-
-      //   gsap.set(["#EF-image1"], {
-      //   autoAlpha: 1,
-      //   delay: 0.1,
-      // });
-      // gsap.set(["#EF-copy1", "#EF-copy2"], { delay: 0.4, autoAlpha: 1 });
 
       gsap.set(["#pink-filled-circle-box"], {
         autoAlpha: 1,
