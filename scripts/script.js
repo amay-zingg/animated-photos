@@ -1,3 +1,7 @@
+// * * * * THIS IS THE CIRCLES ANIMATION THAT TRIPPED ME UP AT WORK
+
+
+// * * * * THIS IS REGULARLY SCHEDULED CONTENT
 function redCircle() {
   let ele = document.getElementById("turbulenceCircle");
   gsap.set(".redCircle", { opacity: 1 });
