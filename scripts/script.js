@@ -1,3 +1,21 @@
+// * * * * IMAGE SLIDER
+$(document).ready(function () {
+  var slideWidth = $(".sliderWrapper").width(),
+    $slider = $("#sliderImages"),
+    $nextButton = $("#nextButton"),
+    clickCount = 0;
+
+  $nextButton.click(function () {
+    clickCount++;
+    if (clickCount > 3) {
+      clickCount = 0;
+    }
+    // console.log(clickCount);
+    TweenLite.to($slider, 0.5, { x: -clickCount * slideWidth });
+  });
+});
+
+
 // * * * * THIS IS THE CIRCLES ANIMATION THAT TRIPPED ME UP AT WORK
 function circleAnimation(){
 

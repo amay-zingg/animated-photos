@@ -1,3 +1,51 @@
+/* * * * TIGER SLIDESHOW * * * */
+.sliderWrapper {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: maroon;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderImages {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.nav {
+  margin: 10px auto 0 auto;
+  width: 300px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: moccasin;
+}
+
+.buttonRight {
+  float: right;
+}
+
+.slider-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
 /* * * * FOR SCROLLING LEGAL * * * */
 .adSize {
   width: 300px;
@@ -154,6 +202,7 @@
 .circlesFrame {
   position: relative;
   height: 300px;
+
   width: 300px;
 }
 

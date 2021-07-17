@@ -526,6 +526,60 @@ ul li {
   }
 }
 
+/* * * * TIGER SLIDESHOW * * * */
+.sliderWrapper {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: maroon;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sliderImages {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.nav {
+  margin: 10px auto 0 auto;
+  width: 300px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: moccasin;
+}
+
+.buttonRight {
+  float: right;
+}
+
+.slider-img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* * * * FOR SCROLLING LEGAL * * * */
 .adSize {
   width: 300px;
