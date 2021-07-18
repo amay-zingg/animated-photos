@@ -17,20 +17,20 @@ $(document).ready(function () {
 
 
 // * * * * THIS IS THE CIRCLES ANIMATION THAT TRIPPED ME UP AT WORK
-function circleAnimation(){
+// function circleAnimation(){
 
-  frameOne();
+//   frameOne();
 
-  function frameOne() {
-    gsap.set(["#blue-filled-circle-box"], { autoAlpha: 1});
-    gsap.set(["#blue-filled-circle"], { autoAlpha: 1, x: -94, y: 195 });
+//   function frameOne() {
+//     gsap.set(["#blue-filled-circle-box"], { autoAlpha: 1});
+//     gsap.set(["#blue-filled-circle"], { autoAlpha: 1, x: -94, y: 195 });
 
-    MorphSVGPlugin.convertToPath("circle");
-    gsap.set(["#purple-stroke-circle-box"], { autoAlpha: 1, x: 0, y: 0 });
-    gsap.set(["#start"], { autoAlpha: 0, x: 290, y: -100 });
-    gsap.set(["#end", "#middle"], { autoAlpha: 0 });
+//     MorphSVGPlugin.convertToPath("circle");
+//     gsap.set(["#purple-stroke-circle-box"], { autoAlpha: 1, x: 0, y: 0 });
+//     gsap.set(["#start"], { autoAlpha: 0, x: 290, y: -100 });
+//     gsap.set(["#end", "#middle"], { autoAlpha: 0 });
 
-    var tl = gsap.timeline({});
+//     var tl = gsap.timeline({});
     // * * * * ORIGINAL
     // tl.from(["#start"], {
     //   autoAlpha: 0,
@@ -57,190 +57,190 @@ function circleAnimation(){
     // });
     // * * * * ORIGINAL
  
-    tl.from(["#start"], {
-      autoAlpha: 0,
-    });
-    tl.to(["#start"], {
-      autoAlpha: 1,
-      duration: .5,
-      x: 252,
-      y: -82,
-      transformOrigin: "50% 50%",
-      scale: 1.05,
-      ease: Linear.easeNone,
-      morphSVG: "#middle",
-    });
-    tl.to(["#start"], {
-      // * * * * GO BACK TO 6.5sec
-      duration: 1,
-      rotation: "+=360",
-      ease: Linear.easeNone,
-    });
+    // tl.from(["#start"], {
+    //   autoAlpha: 0,
+    // });
+    // tl.to(["#start"], {
+    //   autoAlpha: 1,
+    //   duration: .5,
+    //   x: 252,
+    //   y: -82,
+    //   transformOrigin: "50% 50%",
+    //   scale: 1.05,
+    //   ease: Linear.easeNone,
+    //   morphSVG: "#middle",
+    // });
+    // tl.to(["#start"], {
+    //   // * * * * GO BACK TO 6.5sec
+    //   duration: 1,
+    //   rotation: "+=360",
+    //   ease: Linear.easeNone,
+    // });
 
     // Blue circle
 
-    var til = gsap.timeline({});
-    til.from(["#blue-filled-circle"], {
-      delay: 0.5,
-      duration: 0.6,
-      scale: 0.5,
-      transformOrigin: "50% 50%",
-    });
-    til.to(["#blue-filled-circle"], {
-      duration: 0.4,
-      scale: 1,
-    });
-    til.to(["#blue-filled-circle"], {
-      duration: 2,
-    });
+    // var til = gsap.timeline({});
+    // til.from(["#blue-filled-circle"], {
+    //   delay: 0.5,
+    //   duration: 0.6,
+    //   scale: 0.5,
+    //   transformOrigin: "50% 50%",
+    // });
+    // til.to(["#blue-filled-circle"], {
+    //   duration: 0.4,
+    //   scale: 1,
+    // });
+    // til.to(["#blue-filled-circle"], {
+    //   duration: 2,
+    // });
 
-    var delay = 2.6;
-    gsap.delayedCall(delay, frameTwo);
-    };
+    // var delay = 2.6;
+    // gsap.delayedCall(delay, frameTwo);
+    // };
 
-    frameTwo();
+    // frameTwo();
 
-    function frameTwo() {
-      var delay = 2.6;
+    // function frameTwo() {
+    //   var delay = 2.6;
 
-    gsap.to(["#F4-copy1"], {
-      duration: 0.1,
-      autoAlpha: 0,
-      delay: delay,
-    });
+    // gsap.to(["#F4-copy1"], {
+    //   duration: 0.1,
+    //   autoAlpha: 0,
+    //   delay: delay,
+    // });
 
     // GO BACKWARDS
-    var tl = gsap.timeline({});
-    tl.from(["#start"], {
-      delay: 2.6,
-    });
-    tl.to(["#start"], {
-      duration: 0.1,
-      x: 290,
-      y: -100,
-       autoAlpha: 0,
-      // transformOrigin: "50% 50%",
-      // ease: Linear.easeNone,
-      morphSVG: "#start",
-    });
+    // var tl = gsap.timeline({});
+    // tl.from(["#start"], {
+    //   delay: 2.6,
+    // });
+    // tl.to(["#start"], {
+    //   duration: 0.1,
+    //   x: 290,
+    //   y: -100,
+    //    autoAlpha: 0,
+    //   // transformOrigin: "50% 50%",
+    //   // ease: Linear.easeNone,
+    //   morphSVG: "#start",
+    // });
 
-    gsap.delayedCall(delay, frameThree);
-      };
+    // gsap.delayedCall(delay, frameThree);
+    //   };
 
-    function frameThree() {
-      // GO BACKWARDS
-      var tl = gsap.timeline({});
-        tl.from(["#blue-filled-circle"], {
-          duration: 0.1,
-        });
+    // function frameThree() {
+    //   // GO BACKWARDS
+    //   var tl = gsap.timeline({});
+    //     tl.from(["#blue-filled-circle"], {
+    //       duration: 0.1,
+    //     });
 
-        tl.to(["#blue-filled-circle"], {
-          duration: 0.2,
-          x: -94,
-          y: 195,
-          transformOrigin: "50% 50%",
-        });
-        tl.to(["#blue-filled-circle"], {
-          duration: 0.2,
-          autoAlpha: 0,
-          scale: 0,
-          transformOrigin: "50% 50%",
-        });
+    //     tl.to(["#blue-filled-circle"], {
+    //       duration: 0.2,
+    //       x: -94,
+    //       y: 195,
+    //       transformOrigin: "50% 50%",
+    //     });
+    //     tl.to(["#blue-filled-circle"], {
+    //       duration: 0.2,
+    //       autoAlpha: 0,
+    //       scale: 0,
+    //       transformOrigin: "50% 50%",
+    //     });
 
-        var delay = 0.8;
-        gsap.delayedCall(delay, endFrame);
-      }
+    //     var delay = 0.8;
+    //     gsap.delayedCall(delay, endFrame);
+    //   }
     
 
-      function endFrame() {
+//       function endFrame() {
 
-      gsap.set(["#pink-filled-circle-box"], {
-        autoAlpha: 1,
-        delay: 0.4,
-        x: 0,
-        y: 0,
-      });
-      gsap.set(["#pink-filled-circle"], {
-        x: -100,
-        y: 180,
-      });
-      gsap.set(["#blue-stroke-circle-box"], {
-        autoAlpha: 1,
-        delay: 0.4,
-        x: 0,
-        y: 0,
-      });
-      gsap.set(["#blue-stroke-circle"], {
-        autoAlpha: 1,
-        x: 280,
-        y: -100,
-      });
+//       gsap.set(["#pink-filled-circle-box"], {
+//         autoAlpha: 1,
+//         delay: 0.4,
+//         x: 0,
+//         y: 0,
+//       });
+//       gsap.set(["#pink-filled-circle"], {
+//         x: -100,
+//         y: 180,
+//       });
+//       gsap.set(["#blue-stroke-circle-box"], {
+//         autoAlpha: 1,
+//         delay: 0.4,
+//         x: 0,
+//         y: 0,
+//       });
+//       gsap.set(["#blue-stroke-circle"], {
+//         autoAlpha: 1,
+//         x: 280,
+//         y: -100,
+//       });
 
-      // PINK CIRCLE
-      gsap.from(["#pink-filled-circle"], {
-        autoAlpha: 0,
-        duration: 0.5,
-        scale: 0.5,
-        transformOrigin: "50% 50%",
-      });
-      gsap.to(["#pink-filled-circle"], {
-        autoAlpha: 1,
-        duration: 1,
-        scale: 1,
-        x: -64,
-        y: 218,
-      });
+//       // PINK CIRCLE
+//       gsap.from(["#pink-filled-circle"], {
+//         autoAlpha: 0,
+//         duration: 0.5,
+//         scale: 0.5,
+//         transformOrigin: "50% 50%",
+//       });
+//       gsap.to(["#pink-filled-circle"], {
+//         autoAlpha: 1,
+//         duration: 1,
+//         scale: 1,
+//         x: -64,
+//         y: 218,
+//       });
 
-      // BLUE STROKE CIRCLE
-      gsap.from(["#blue-stroke-circle"], {
-        opacity: 0,
-        duration: 0.2,
-        scale: 0.5,
-        transformOrigin: "50% 50%",
-      });
-      gsap.to(["#blue-stroke-circle"], {
-        opacity: 1,
-        duration: 1,
-        scale: 1.2,
-        x: 165,
-        y: -25,
-      });
+//       // BLUE STROKE CIRCLE
+//       gsap.from(["#blue-stroke-circle"], {
+//         opacity: 0,
+//         duration: 0.2,
+//         scale: 0.5,
+//         transformOrigin: "50% 50%",
+//       });
+//       gsap.to(["#blue-stroke-circle"], {
+//         opacity: 1,
+//         duration: 1,
+//         scale: 1.2,
+//         x: 165,
+//         y: -25,
+//       });
 
-  }
-};
+//   }
+// };
 
-circleAnimation();
+// circleAnimation();
 
 // * * * * THIS IS REGULARLY SCHEDULED CONTENT
-function redCircle() {
-  let ele = document.getElementById("turbulenceCircle");
-  gsap.set(".redCircle", { opacity: 1 });
+// function redCircle() {
+//   let ele = document.getElementById("turbulenceCircle");
+//   gsap.set(".redCircle", { opacity: 1 });
 
-  var tl = gsap.timeline({ repeat: -1 });
+//   var tl = gsap.timeline({ repeat: -1 });
 
-  tl.from(["#redCircle"], {
-    ease: "power2.out",
-    y: 100,
-    x: 100,
-    duration: 3,
-  });
+//   tl.from(["#redCircle"], {
+//     ease: "power2.out",
+//     y: 100,
+//     x: 100,
+//     duration: 3,
+//   });
 
-  tl.to(["#redCircle"], {
-    ease: Power1.easeInOut,
-    duration: 8,
-    y: 50,
-    x: 250,
-    scale: 1.6,
-  });
-  tl.to(["#redCircle"], {
-    opacity: 0,
-    duration: 2,
-  });
+//   tl.to(["#redCircle"], {
+//     ease: Power1.easeInOut,
+//     duration: 8,
+//     y: 50,
+//     x: 250,
+//     scale: 1.6,
+//   });
+//   tl.to(["#redCircle"], {
+//     opacity: 0,
+//     duration: 2,
+//   });
 
-  gsap.to(ele, 14, { attr: { baseFrequency: "0 0" } });
-}
+//   gsap.to(ele, 14, { attr: { baseFrequency: "0 0" } });
+// }
 
-redCircle();
+// redCircle();
 
 function sectionOne() {
   let el = document.getElementById("turbulence");
