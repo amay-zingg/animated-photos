@@ -526,6 +526,13 @@ ul li {
   }
 }
 
+/* * * * Retro Art Design * * * */
+.retroArtBox {
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+}
+
 /* * * * TIGER SLIDESHOW * * * */
 .sliderWrapper {
   position: relative;
@@ -597,7 +604,6 @@ ul li {
 }
 
 .topLef {
-  left: 0px;
   top: 0px;
 }
 

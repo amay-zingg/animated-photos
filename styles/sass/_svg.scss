@@ -1,3 +1,10 @@
+/* * * * Retro Art Design * * * */
+.retroArtBox {
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+}
+
 /* * * * TIGER SLIDESHOW * * * */
 .sliderWrapper {
   position: relative;
@@ -59,8 +66,13 @@
 .posAb {
   position: absolute;
 }
+// FUCKING UP RETRO ART
+// .topLef {
+//   left: 0px;
+//   top: 0px;
+// }
 .topLef {
-  left: 0px;
+  // left: 0px;
   top: 0px;
 }
 .topR {
