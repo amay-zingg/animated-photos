@@ -1,4 +1,28 @@
 /* * * * Retro Art Design * * * */
+#superRad-bg {
+  background: no-repeat url("../assets/superRad-bg.png");
+}
+
+#superRad1 {
+  background: no-repeat url("../assets/superRad.png");
+}
+
+#superRad2 {
+  background: no-repeat url("../assets/superRad-glow-pink.png");
+}
+
+#superRad3 {
+  background: no-repeat url("../assets/superRad-glow-pink-stroke.png");
+}
+
+#superRad4 {
+  background: no-repeat url("../assets/superRad-gradient.png");
+}
+
+#superRad5 {
+  background: no-repeat url("../assets/superRad-glow-white.png");
+}
+
 .retroArtBox {
   overflow: hidden;
   width: 300px;

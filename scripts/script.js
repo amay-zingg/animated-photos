@@ -1,3 +1,5 @@
+
+
 // * * * * IMAGE SLIDER
 $(document).ready(function () {
   var slideWidth = $(".sliderWrapper").width(),
@@ -13,6 +15,70 @@ $(document).ready(function () {
     // console.log(clickCount);
     TweenLite.to($slider, 0.5, { x: -clickCount * slideWidth });
   });
+
+  // * * * * RETRO BG
+function frameOne() {
+  gsap.set(["#GL-bg"], { autoAlpha: 1 });
+
+  gsap.from([".grid-lines"], {
+    autoAlpha: 0,
+    stagger: 0.05,
+  });
+
+  var delay = 2.75;
+  gsap.delayedCall(delay, frameTwo);
+}
+
+// * * * * FRAME TWO
+function frameTwo() {
+  gsap.set(["#pink", "#yellow", "#teal", "#purple", "#blue", "#white"], {
+    autoAlpha: 1,
+  });
+
+  gsap.from(["#pink", "#yellow", "#teal", "#purple", "#blue", "#white"], {
+    autoAlpha: 0,
+    stagger: 0.15,
+  });
+
+  var tl = gsap.timeline({ repeat: -1 });
+  tl.from(["#pink", "#yellow", "#teal", "#purple", "#blue", "#white"], {
+    // rotate: 0,
+    scale: 1,
+  });
+  tl.to(["#pink", "#yellow", "#teal", "#purple", "#blue", "#white"], {
+    // rotate: -20,
+    scale: 1.05,
+  });
+
+  var delay = 1;
+  gsap.delayedCall(delay, frameThree);
+}
+
+// * * * * FRAME THREE
+function frameThree() {
+  // gsap.set(["#superRad-bg"], { autoAlpha: 1 });
+
+  gsap.set(
+    [
+      "#superRad",
+      "#superRad1",
+      "#superRad2",
+      "#superRad3",
+      "#superRad4",
+      "#superRad5",
+    ],
+    { autoAlpha: 1 }
+  );
+
+  gsap.from(
+    ["#superRad1", "#superRad2", "#superRad3", "#superRad4", "#superRad5"],
+    { autoAlpha: 0, duration: 1,stagger: 0.35, ease: "ease.in" }
+  );
+
+}
+
+frameOne();
+  
 });
 
 
