@@ -527,10 +527,6 @@ ul li {
 }
 
 /* * * * Retro Art Design * * * */
-#superRad-bg {
-  background: no-repeat url("../assets/superRad-bg.png");
-}
-
 #superRad1 {
   background: no-repeat url("../assets/superRad.png");
 }
