@@ -526,6 +526,52 @@ ul li {
   }
 }
 
+#GL-bg {
+  background: #c1f9ff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c1f9ff), color-stop(7%, #a3dedd), color-stop(15%, #467dd7), color-stop(20%, #5534fc), color-stop(40%, #452180), color-stop(60%, black));
+  background: linear-gradient(0deg, #c1f9ff 0%, #a3dedd 7%, #467dd7 15%, #5534fc 20%, #452180 40%, black 60%);
+}
+
+#GL-fg {
+  background: url(/assets/treeline.png);
+  background-repeat: no-repeat;
+}
+
+#F1-moon-full {
+  background: url(/assets/SVGs/fullMoon2.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-half-left {
+  background: url(/assets/SVGs/moonHalfLeft.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-half-right {
+  background: url(/assets/SVGs/moonHalfRight.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-crescent-left {
+  background: url(/assets/SVGs/moonCrescentLeft.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-crescent-right {
+  background: url(/assets/SVGs/moonCrescentRight.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
 /* * * * Retro Art Design * * * */
 #superRad1 {
   background: no-repeat url("../assets/superRad.png");

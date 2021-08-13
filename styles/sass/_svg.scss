@@ -1,3 +1,61 @@
+// MOON PHASES
+// * * * * GLOBAL
+#GL-bg {
+  background: rgb(193, 249, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(193, 249, 255, 1) 0%,
+    rgba(163, 222, 221, 1) 7%,
+    rgba(70, 125, 215, 1) 15%,
+    rgba(85, 52, 252, 1) 20%,
+    rgba(69, 33, 128, 1) 40%,
+    rgba(0, 0, 0, 1) 60%
+  );
+}
+
+#GL-fg {
+  background: url(/assets/treeline.png);
+  background-repeat: no-repeat;
+}
+
+// * * * * MOONS
+#F1-moon-full {
+  background: url(/assets/SVGs/fullMoon2.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+// Half
+#F1-moon-half-left {
+  background: url(/assets/SVGs/moonHalfLeft.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-half-right {
+  background: url(/assets/SVGs/moonHalfRight.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+// Crescent
+#F1-moon-crescent-left {
+  background: url(/assets/SVGs/moonCrescentLeft.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+#F1-moon-crescent-right {
+  background: url(/assets/SVGs/moonCrescentRight.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
 /* * * * Retro Art Design * * * */
 // #superRad-bg {
 //   background: no-repeat url("../assets/superRad-bg.png");
