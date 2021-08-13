@@ -526,6 +526,15 @@ ul li {
   }
 }
 
+.viewport {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 1;
+}
+
 #GL-bg {
   background: #c1f9ff;
   background: -webkit-gradient(linear, left bottom, left top, from(#c1f9ff), color-stop(7%, #a3dedd), color-stop(15%, #467dd7), color-stop(20%, #5534fc), color-stop(40%, #452180), color-stop(60%, black));

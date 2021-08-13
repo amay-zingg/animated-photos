@@ -45,6 +45,7 @@ function moonPhase() {
 
 moonPhase();
 
+
 // * * * * IMAGE SLIDER
 $(document).ready(function () {
   var slideWidth = $(".sliderWrapper").width(),
@@ -60,6 +61,7 @@ $(document).ready(function () {
     // console.log(clickCount);
     TweenLite.to($slider, 0.5, { x: -clickCount * slideWidth });
   });
+  
 
   // * * * * RETRO BG
 function frameOne() {

@@ -1,5 +1,14 @@
 // MOON PHASES
 // * * * * GLOBAL
+.viewport {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 1;
+}
+
 #GL-bg {
   background: rgb(193, 249, 255);
   background: linear-gradient(
